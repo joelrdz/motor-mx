@@ -1,0 +1,29 @@
+.btn {
+	border-radius: 0;
+}
+
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited {
+	// background-color: var(--color-green);
+	background-color: color(green);
+	border: 1px solid darken($color-green, 15);
+	color: black;
+	transition: all .2s;
+
+	&:hover,
+	&:focus {
+		background-color: darken($color-green, 10);
+		color: black;
+	}
+
+	&:active {
+		background-color: yellow;
+		background-color: darken($color-green, 15);
+		transform: translateY(2px) scale(.95);
+	}
+}
+
+.btn-lg {
+	line-height: 4rem;
+}

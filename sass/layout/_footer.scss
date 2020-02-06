@@ -1,0 +1,21 @@
+.footer {
+	display: flex;
+	display: none;
+
+	.flex-item {
+		padding: 3rem;
+		padding-top: 9rem;
+	}
+
+	&__info {
+		background-color: #757575;
+		color: black;
+		flex: 1;
+	}
+
+	&__links {
+		background-color: black;
+		color: white;
+		flex: 2;
+	}
+}

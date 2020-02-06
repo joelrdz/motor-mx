@@ -1,0 +1,71 @@
+.header {
+	background-color: black;
+	color: white;
+
+	// height: var(--height-main-header);
+	padding: 4.5rem 10rem;
+	padding-left: 15rem;
+
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	@include respond(tab-port) {
+		flex-direction: column;
+		padding: 1rem;
+		align-items: center;
+	}
+
+	&__left {
+		@include respond(tab-port) {
+			margin-bottom: 2rem;
+		}
+
+		@include respond(phone) {
+			img {
+				max-width: 20rem;
+			}
+		}
+	}
+	&__right {
+
+	}
+}
+
+.site-nav {
+	list-style: none;
+	margin: 0;
+	display: flex;
+	font-size: 1.4rem;
+	user-select: none;
+
+	&__item {
+		padding-bottom: .8rem;
+
+		&:not(:last-child) {
+			margin-right: 2.5rem;
+		}
+
+		&--active {
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	&__link:link,
+	&__link:visited,
+	&__tickets:link,
+	&__tickets:visited {
+		color: white;
+	}
+
+	&__link:hover,
+	&__link:focus,
+	&__tickets:hover,
+	&__tickets:focus {
+		text-decoration: none;
+	}
+}
