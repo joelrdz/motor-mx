@@ -51,10 +51,12 @@ $(window).scroll(function() {
 
 
 
-
-
 // Glide slider
 new Glide('#glide-exponents').mount();
+
+new Glide('#glide-background', {
+	autoplay: 5000
+}).mount();
 
 
 
@@ -62,7 +64,7 @@ new Glide('#glide-exponents').mount();
 // Countdown
 
 // Set the date we're counting down to
-let countDownDate = new Date("Mar 24, 2020 15:37:25").getTime();
+let countDownDate = new Date("Mar 24, 2020 10:00:00").getTime();
 
 // Update the count down every 1 second
 let x = setInterval( function() {
@@ -80,7 +82,8 @@ let x = setInterval( function() {
 
 	// Display the result in the element with id="countdown"
 	// document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-	document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m ";
+	// document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m ";
+	document.getElementById("countdown").innerHTML = "Faltan " + days + "d " + hours + "h " + minutes + "m ";
 
 	// If the count down is finished, write some text
 	if (distance < 0) {

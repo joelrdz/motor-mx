@@ -15,7 +15,6 @@
 	}
 }
 
-
 .section-info {
 	position: relative;
 
@@ -50,7 +49,6 @@
 
 		@include respond(tab-land) {
 			padding: 3rem 10rem 0;
-
 		}
 
 		@include respond(tab-port) {
@@ -85,7 +83,7 @@
 	}
 
 	&__callout {
-		font-size: 3.5rem;
+		font-size: 3.4rem;
 		line-height: 4.5rem;
 		margin-bottom: 4.5rem;
 		hyphens: auto;
@@ -200,6 +198,15 @@
 			max-width: 85%;
 			background-color: rgba(black, .6);
 		}
+	}
+
+	.text-center {
+		background-color: rgba(white, .8);
+	}
+
+	.img-responsive {
+		max-width: 30rem;
+		display: inline-block;
 	}
 }
 
@@ -406,9 +413,125 @@
 	}
 }
 
+.section-background {
+	position: relative;
+	font-size: 1.2rem;
+	background-color: rgba(black, .8);
+	background-color: black;
+
+	h3 {
+		margin: 0;
+		margin-bottom: 1rem;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	&__container {
+		padding: 3rem;
+		max-width: 144rem;
+		margin: 0 auto;
+		color: white;
+
+		@include respond(tab-land) {
+			padding: 2rem 0;
+			width: 80%;
+		}
+
+		@include respond(tab-port) {
+		}
+	}
+
+	.glide {
+		&__slides {
+			margin: 0;
+		}
+
+		&__slide {
+			height: 60rem;
+			background-size: cover;
+			background-position: center;
+
+			@include respond(phone) {
+				height: 50vh;
+			}
+
+			&--1 { background-image: url(/img/past-1.JPG); }
+			&--2 { background-image: url(/img/past-2.JPG); }
+			&--3 { background-image: url(/img/past-3.JPG); }
+			&--4 { background-image: url(/img/past-4.JPG); }
+			&--5 { background-image: url(/img/past-5.jpg); }
+			&--6 { background-image: url(/img/past-6.JPG); }
+			&--7 { background-image: url(/img/past-7.jpg); }
+		}
+	}
+}
+
+.section-tickets {
+	background-color: var(--color-green-secondary);
+	// color: white;
+	padding: 3rem;
+	text-align: center;
+	border: 4px solid black;
+	// background-image: url(/img/tickets-bg.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-color: #43e5f9;
+
+	@include respond(phone) {
+		padding: 1.5rem;
+	}
+
+
+	h3 {
+		background-color: black;
+		color: white;
+		display: inline-block;
+		padding: .8rem 1.5rem;
+		margin-bottom: 3rem;
+	}
+
+	strong {
+		background-color: black;
+		color: white;
+		font-size: 1.5rem;
+		padding: .5rem;
+	}
+
+	.logos-container {
+		text-align: center;
+		padding: 1rem;
+
+		.logo-fcp {
+			width: 20rem;
+			margin-right: 3rem;
+
+			@include respond(phone) {
+				margin-bottom: 3rem;
+				margin-right: 0;
+			}
+		}
+
+		.logo-uanl {
+			width: 15rem;
+		}
+	}
+
+	.btn-primary {
+		padding: 1rem 5rem;
+		// background-color: #4dd0a2;
+		// border-color: #4dd0a2;
+
+		// &:hover {
+		// 	background-color: darken(#4dd0a2, 5);
+		// }
+	}
+}
+
 .section-pdf {
 	background-color: black;
-	background-image: url(/img/profile-pink.png);
+	background-image: url(/img/profile-black.png);
 	background-size: contain;
 	background-position: center center;
 	height: 26rem;
@@ -423,7 +546,7 @@
 	@include respond(tab-port) {}
 
 	.btn-primary {
-		max-width: 30rem;
+		max-width: 20rem;
 		text-transform: uppercase;
 		font-size: 2rem;
 	}
