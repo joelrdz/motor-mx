@@ -1,21 +1,61 @@
 .footer {
 	display: flex;
-	display: none;
+
+	@include respond(phone) {
+		flex-direction: column;
+	}
 
 	.flex-item {
-		padding: 3rem;
-		padding-top: 9rem;
+		padding: 5rem;
+		flex: 1 0;
+
+		@include respond(phone) {
+			padding: 3rem 5rem;
+		}
+	}
+
+	h3 {
+		margin: 0;
+		margin-bottom: 2rem;
 	}
 
 	&__info {
-		background-color: #757575;
-		color: black;
-		flex: 1;
+		background-color: black;
+		color: white;
+
+		a:link,
+		a:visited {
+			margin-bottom: .8rem;
+			font-size: 1.8rem;
+			color: #ccc;
+		}
+
+		a:hover {
+			color: white;
+		}
 	}
 
 	&__links {
 		background-color: black;
 		color: white;
-		flex: 2;
+
+		@include respond(phone) {
+			order: -1;
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			display: block;
+			margin-bottom: .8rem;
+			font-size: 1.8rem;
+			color: #ccc;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: white;
+		}
 	}
 }

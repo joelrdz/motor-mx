@@ -210,69 +210,6 @@
 	}
 }
 
-.section-program {
-	display: flex;
-	display: none;
-
-	@include respond(tab-port) {
-		flex-direction: column;
-	}
-
-
-	.download {
-		background-color: black;
-		color: white;
-		flex-basis: 40%;
-		position: relative;
-
-		@include respond(tab-port) {
-			order: 1;
-			padding: 1rem;
-		}
-
-		.download__container {
-			text-align: center;
-		}
-	}
-
-	.schedule {
-		background-color: var(--color-green);
-		flex-basis: 60%;
-		padding: 2rem;
-
-		@include respond(tab-port) {
-			padding: 1rem;
-		}
-
-		.table {
-			font-size: 1.2rem;
-			margin: 0;
-
-			// Just the hour
-			& > tbody > tr > th {
-				font-weight: bold;
-				font-size: 1.4rem;
-			}
-
-			& > tbody > tr > td,
-			& > tbody > tr > th {
-				border-top: none;
-				position: relative;
-
-				&::before {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					left: .8rem;
-					width: 10px;
-					height: 2px;
-					background-color: black;
-				}
-			}
-		}
-	}
-}
-
 .section-exponents {
 	// background-color: var(--color-green-secondary);
 	border: 4px solid black;
@@ -327,17 +264,21 @@
 		}
 
 		&__arrows {
-
-
-			@include respond(tab-port) {
-				display: none;
-			}
+			// @include respond(tab-port) {
+			// 	display: none;
+			// }
 		}
 
 		&__arrow {
 			background-color: black;
 			border: none;
 			border-radius: 0;
+
+			@include respond(tab-port) {
+				background-color: transparent;
+				border: 2px solid black;
+				color: black;
+			}
 		}
 
 		.slide-general {
@@ -413,7 +354,58 @@
 	}
 }
 
-.section-background {
+.section-video {
+	.homepage-hero-module {
+		border-right: none;
+		border-left: none;
+		position: relative;
+	}
+
+	.no-video .video-container video,
+	.touch .video-container video {
+		display: none;
+	}
+
+	.no-video .video-container .poster,
+	.touch .video-container .poster {
+		display: block !important;
+	}
+
+	.video-container {
+		position: relative;
+		bottom: 0%;
+		left: 0%;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		background: #000;
+	}
+
+	.video-container .poster img {
+		width: 100%;
+		bottom: 0;
+		position: absolute;
+	}
+
+	.video-container .filter {
+		z-index: 100;
+		position: absolute;
+		background: rgba(0, 0, 0, 0.4);
+		width: 100%;
+	}
+
+	.video-container video {
+		position: absolute;
+		z-index: 0;
+		bottom: 0;
+	}
+
+	.video-container video.fillWidth {
+		width: 100%;
+	}
+}
+
+.section-past {
 	position: relative;
 	font-size: 1.2rem;
 	background-color: rgba(black, .8);
@@ -451,7 +443,7 @@
 		&__slide {
 			height: 60rem;
 			background-size: cover;
-			background-position: center;
+			background-position: center center;
 
 			@include respond(phone) {
 				height: 50vh;
@@ -463,7 +455,20 @@
 			&--4 { background-image: url(/img/past-4.JPG); }
 			&--5 { background-image: url(/img/past-5.jpg); }
 			&--6 { background-image: url(/img/past-6.JPG); }
-			&--7 { background-image: url(/img/past-7.jpg); }
+
+			// Odin
+			&--7 {
+				background-image: url(/img/past-7.jpg);
+				background-position: center top;
+			}
+		}
+
+		&__arrow {
+			border-radius: 0;
+
+			@include respond(tab-port) {
+				border: 2px solid white;
+			}
 		}
 	}
 }
@@ -529,6 +534,76 @@
 	}
 }
 
+
+
+/* ---------- */
+// Consider to remove
+/* ---------- */
+
+.section-program {
+	display: flex;
+
+	// Hidding temporarily
+	display: none;
+
+	@include respond(tab-port) {
+		flex-direction: column;
+	}
+
+	.download {
+		background-color: black;
+		color: white;
+		flex-basis: 40%;
+		position: relative;
+
+		@include respond(tab-port) {
+			order: 1;
+			padding: 1rem;
+		}
+
+		.download__container {
+			text-align: center;
+		}
+	}
+
+	.schedule {
+		background-color: var(--color-green);
+		flex-basis: 60%;
+		padding: 2rem;
+
+		@include respond(tab-port) {
+			padding: 1rem;
+		}
+
+		.table {
+			font-size: 1.2rem;
+			margin: 0;
+
+			// Just the hour
+			& > tbody > tr > th {
+				font-weight: bold;
+				font-size: 1.4rem;
+			}
+
+			& > tbody > tr > td,
+			& > tbody > tr > th {
+				border-top: none;
+				position: relative;
+
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: .8rem;
+					width: 10px;
+					height: 2px;
+					background-color: black;
+				}
+			}
+		}
+	}
+}
+
 .section-pdf {
 	background-color: black;
 	background-image: url(/img/profile-black.png);
@@ -542,6 +617,9 @@
 
 	align-items: center;
 	justify-content: center;
+
+	// Hidding temporarily
+	display: none;
 
 	@include respond(tab-port) {}
 

@@ -1,3 +1,4 @@
+/* Scroll Menu Items */
 // Cache selectors
 let lastId,
 	topMenu = $('#header'),
@@ -51,18 +52,18 @@ $(window).scroll(function() {
 
 
 
-// Glide slider
-new Glide('#glide-exponents').mount();
+/* Glide Sliders */
+new Glide('#glide-exponents', {
+	autoplay: 8500
+}).mount();
 
-new Glide('#glide-background', {
+new Glide('#glide-past', {
 	autoplay: 5000
 }).mount();
 
 
 
-
-// Countdown
-
+/* Countdown */
 // Set the date we're counting down to
 let countDownDate = new Date("Mar 24, 2020 10:00:00").getTime();
 
@@ -91,3 +92,64 @@ let x = setInterval( function() {
 		document.getElementById("countdown").innerHTML = "LLEGÓ EL DÍA";
 	}
 }, 1000);
+
+
+
+/* Video */
+// jQuery is required to run this code
+$( document ).ready(function() {
+	scaleVideoContainer();
+
+	initBannerVideoSize('.video-container .poster img');
+	initBannerVideoSize('.video-container .filter');
+	initBannerVideoSize('.video-container video');
+
+	$(window).on('resize', function() {
+		scaleVideoContainer();
+		scaleBannerVideoSize('.video-container .poster img');
+		scaleBannerVideoSize('.video-container .filter');
+		scaleBannerVideoSize('.video-container video');
+	});
+});
+
+function scaleVideoContainer() {
+	// this was + 5 before, why??, and why it works with - 275 ??
+	var height = $(window).height() - 275;
+	var unitHeight = parseInt(height) + 'px';
+	$('.homepage-hero-module').css('height', unitHeight);
+}
+
+function initBannerVideoSize(element) {
+	$(element).each(function(){
+		$(this).data('height', $(this).height());
+		$(this).data('width', $(this).width());
+	});
+
+	scaleBannerVideoSize(element);
+}
+
+function scaleBannerVideoSize(element) {
+	var windowWidth = $(window).width(),
+	windowHeight = $(window).height() + 5,
+	videoWidth,
+	videoHeight;
+
+	// console.log(windowHeight);
+
+	$(element).each(function() {
+		var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+		$(this).width(windowWidth);
+
+		// this was origially 1000
+		if(windowWidth < 900) {
+			videoHeight = windowHeight;
+			videoWidth = videoHeight / videoAspectRatio;
+			$(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+			$(this).width(videoWidth).height(videoHeight);
+		}
+
+		$('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+	});
+}
