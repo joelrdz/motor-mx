@@ -9,10 +9,16 @@
 	position: fixed;
 	width: 100%;
 	z-index: 100;
+	top: 0;
+	left: 0;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
+
+	@include respond(tab-land) {
+		padding: 4.5rem 5rem;
+	}
 
 	@include respond(tab-port) {
 		flex-direction: column;
@@ -21,9 +27,7 @@
 	}
 
 	&__left {
-		@include respond(tab-port) {
-			margin-bottom: 2rem;
-		}
+		@include respond(tab-port) {}
 
 		@include respond(phone) {
 			img {
@@ -32,7 +36,9 @@
 		}
 	}
 	&__right {
-
+		@include respond(tab-port) {
+			display: none;
+		}
 	}
 }
 

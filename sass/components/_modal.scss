@@ -1,0 +1,43 @@
+.modal-blocker {
+	z-index: 3000;
+}
+
+.modal-spinner {
+	height: 4.2rem;
+}
+
+.modal {
+	padding: 1.5rem 0;
+
+	a.icon-remove {
+		top: .5rem;
+		right: .5rem;
+	}
+}
+
+
+
+.modal-participants {
+	h3 {
+		padding: 1rem;
+		margin: 0;
+	}
+
+	iframe {
+		width: 100%;
+		overflow-x: hidden;
+	}
+}
+
+.modal-press {
+	background-color: cyan;
+	background-color: black;
+	color: white;
+	padding: 0 1rem;
+
+	h3 {
+		padding: 1rem;
+		margin: 0;
+		margin-bottom: 1rem;
+	}
+}

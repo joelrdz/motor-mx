@@ -19,10 +19,35 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/glide/glide.core.min.css">
 		<link rel="stylesheet" href="css/glide/glide.theme.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="shortcut icon" type="image/png" href="img/icon.png">
 	</head>
 	<body>
+
+		<div class="navigation">
+			<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+			<label for="navi-toggle" class="navigation__button">
+				<span class="navigation__icon">&nbsp;</span>
+			</label>
+
+			<div class="navigation__background">&nbsp;</div>
+
+			<nav class="navigation__nav">
+				<ul class="navigation__list">
+					<li class="navigation__item"><a href="#info" class="navigation__link"><span>01</span>Qué es Motor MX</a></li>
+					<li class="navigation__item"><a href="#sede" class="navigation__link"><span>02</span>Sede</a></li>
+					<li class="navigation__item"><a href="#expositores" class="navigation__link"><span>03</span>Expositores</a></li>
+					<li class="navigation__item"><a href="#boletos" class="navigation__link"><span>04</span>Boletos</a></li>
+					<li class="navigation__item"><a href="#registro" class="navigation__link"><span>05</span>Registro</a></li>
+					<li class="navigation__item"><a href="#prensa" class="navigation__link"><span>06</span>Prensa</a></li>
+					</ul>
+			</nav>
+
+		</div>
+
+
 		<header class="header" id="header">
 			<div class="header__left">
 				<img src="img/logo.png" alt="Logo">
@@ -41,17 +66,13 @@
 					<li class="site-nav__item">
 						<a href="#boletos" class="site-nav__link">Boletos</a>
 					</li>
-					<!-- <li class="site-nav__item" style="display: none;">
-						<a href="#programa" class="site-nav__link">Programa</a>
-					</li> -->
-					<!-- <li class="site-nav__item" style="display: none;">
-						<a href="#patrocinios" class="site-nav__link">Patrocinios</a>
-					</li> -->
-					<!-- <li class="site-nav__item" style="display: none;">
-						<a href="#eventos" class="site-nav__link">Eventos</a>
-					</li> -->
+					<li class="site-nav__item">
+						<a href="#registro" class="site-nav__link">Registro</a>
+					</li>
+					<li class="site-nav__item">
+						<a href="#prensa" class="site-nav__link">Prensa</a>
+					</li>
 				</ul>
-
 			</nav>
 		</header>
 
@@ -116,52 +137,6 @@
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.154254786227!2d-100.31887418448196!3d25.666180818810695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662be2564a51acb%3A0xce66fe196495b048!2sAuditorio%20Pabell%C3%B3n%20M!5e0!3m2!1ses-419!2smx!4v1581579423356!5m2!1ses-419!2smx" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 			</section>
 
-			<!-- Programa -->
-			<!-- <section class="section-program" id="programa">
-				<div class="download">
-					<div class="download__container">
-						<div>Programa</div>
-						<button class="btn btn-primary btn-lg">Descarga PDF</button>
-					</div>
-				</div>
-				<div class="schedule">
-					<table class="table">
-						<tbody>
-							<tr>
-								<th scope="row">9AM 10AM</th>
-								<td>Conferencia Magistral</td>
-								<td>El Cambio Climático</td>
-								<td>Omar Chaparro</td>
-							</tr>
-							<tr>
-								<th scope="row">9AM 10AM</th>
-								<td>Conferencia Magistral</td>
-								<td>El Cambio Climático</td>
-								<td>Omar Chaparro</td>
-							</tr>
-							<tr>
-								<th scope="row">9AM 10AM</th>
-								<td>Conferencia Magistral</td>
-								<td>El Cambio Climático</td>
-								<td>Omar Chaparro</td>
-							</tr>
-							<tr>
-								<th scope="row">9AM 10AM</th>
-								<td>Conferencia Magistral</td>
-								<td>El Cambio Climático</td>
-								<td>Omar Chaparro</td>
-							</tr>
-							<tr>
-								<th scope="row">9AM 10AM</th>
-								<td>Conferencia Magistral</td>
-								<td>El Cambio Climático</td>
-								<td>Omar Chaparro</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</section> -->
-
 			<!-- Expositores -->
 			<section class="section-exponents" id="expositores">
 				<div class="section-title">
@@ -179,15 +154,12 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Brenda Castro</div>
+										<div class="slide-exponent__background">Atleta de Crossfit</div>
 										<div class="slide-exponent__description">
-											Atleta de CrossFit reconocida por ser
-											la primera Mexicana que consiguió
-											participar en los CrossFit Games y
-											considerada la Mujer más fit del
-											continente. Orgullosa egresada de la
-											UANL que se ha dedicado a poner
-											muy en alto el nombre de
-											Latinoamérica.
+											Atleta de CrossFit reconocida por ser la primera Mexicana que consiguió
+											participar en los CrossFit Games y considerada la Mujer más fit del
+											continente. Orgullosa egresada de la UANL que se ha dedicado a poner
+											muy en alto el nombre de Latinoamérica.
 										</div>
 									</div>
 								</div>
@@ -201,13 +173,11 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Chantal Chalita</div>
+										<div class="slide-exponent__background">Fundadora Green Me</div>
 										<div class="slide-exponent__description">
-											Ingeniera ambiental, fundadora de
-											“Green Me” espacio dedicado a las
-											personas que buscan llevar un estilo
-											de vida más ecológico y sustentable
-											a través de pequeños cambios en la
-											rutina de vida.
+											Ingeniera ambiental, fundadora de “Green Me” espacio dedicado a las
+											personas que buscan llevar un estilo de vida más ecológico y sustentable
+											a través de pequeños cambios en la rutina de vida.
 										</div>
 									</div>
 								</div>
@@ -221,17 +191,13 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Eufrosina Cruz</div>
+										<div class="slide-exponent__background">Política Zapoteca</div>
 										<div class="slide-exponent__description">
-											A los 12 años dejó su pueblo en
-											Oaxaca, estudió y logró un cambio
-											en la Constitución de México que
-											garantiza que las mujeres puedan
-											ser elegidas para cualquier cargo. Ha
-											destacado por su activismo por la
-											igualdad de género. Cobró
-											notoriedad al triunfar en la elección
-											municipal y serle anulado su triunfo
-											por ser mujer.
+											A los 12 años dejó su pueblo en Oaxaca, estudió y logró un cambio
+											en la Constitución de México que garantiza que las mujeres puedan
+											ser elegidas para cualquier cargo. Ha destacado por su activismo por la
+											igualdad de género. Cobró notoriedad al triunfar en la elección
+											municipal y serle anulado su triunfo por ser mujer.
 										</div>
 									</div>
 								</div>
@@ -245,15 +211,12 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Martha Herrera</div>
+										<div class="slide-exponent__background">Directora RS CEMEX</div>
 										<div class="slide-exponent__description">
-											Directora Corporativa de
-											Responsabilidad Social de CEMEX.
-											Reconocida entre las 10 mujeres
-											más influyentes del mundo en tema
-											sustentable por el Consejo
-											Empresarial Mundial para el
-											Desarrollo Sostenible, y entre las 100
-											mujeres más influyentes de México
+											Directora Corporativa de Responsabilidad Social de CEMEX.
+											Reconocida entre las 10 mujeres más influyentes del mundo en tema
+											sustentable por el Consejo Empresarial Mundial para el Desarrollo
+											Sostenible, y entre las 100 mujeres más influyentes de México
 											de la Revista Forbes.
 										</div>
 									</div>
@@ -268,8 +231,13 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Dorothy Ruiz</div>
+										<div class="slide-exponent__background">NASA</div>
 										<div class="slide-exponent__description">
-											NASA
+											Ingeniera aeroespacial de la NASA en el Centro Espacial Lyndon B.Johnson,
+											especialista en operaciones espaciales para la Estación Espacial
+											Internacional (ISS) realizadas en el Centro de Control de las Misiones en Houston.
+											El sistema que maneja, ground control, se utiliza para mantener conectada la base
+											de control de misiones con el vehículo espacial, por medio de señal de satélite.
 										</div>
 									</div>
 								</div>
@@ -284,17 +252,13 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Patch Adams</div>
+										<div class="slide-exponent__background">Risoterapia</div>
 										<div class="slide-exponent__description">
-											Su historia de vida sirvió de
-											inspiración para la multipremiada
-											película que lleva su nombre.
-											Creador de la “risoterapía” como
-											método de curación. Organiza cada
-											año viajes alrededor del mundo con
-											grupos de payasos voluntarios que
-											llevan esperanza, alegría y el juego a
-											huérfanos, pacientes y personas
-											vulnerables.
+											Su historia de vida sirvió de inspiración para la multipremiada
+											película que lleva su nombre. Creador de la “risoterapía” como
+											método de curación. Organiza cada año viajes alrededor del mundo con
+											grupos de payasos voluntarios que llevan esperanza, alegría y el juego a
+											huérfanos, pacientes y personas vulnerables.
 										</div>
 									</div>
 								</div>
@@ -308,11 +272,10 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Omar Chaparro</div>
+										<div class="slide-exponent__background">Actor y Conductor</div>
 										<div class="slide-exponent__description">
-											Gracias a su energía y personalidad
-											se ha posicionado como uno de los
-											actores, conductores y productores
-											más importantes de México y
+											Gracias a su energía y personalidad se ha posicionado como uno de los
+											actores, conductores y productores más importantes de México y
 											América Latina.
 										</div>
 									</div>
@@ -327,8 +290,14 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Francisco Garza</div>
+										<div class="slide-exponent__background">Fundación UANL</div>
 										<div class="slide-exponent__description">
-											Fundación UANL
+											Ex-Director general de Arca Continental desde enero de 2003 hasta 2019
+											y principal accionista de PetStar, Francisco Garza Egloff se desempeñó
+											antes como director general Sigma Alimentos, Akra, Petrocel-Temex y
+											Polioles. Es miembro de los consejos de administración de Grupo Industrial
+											Saltillo, Banregio, Banco Holandés Rabobank y de la División de Ingeniería
+											y Arquitectura del ITESM.
 										</div>
 									</div>
 								</div>
@@ -342,15 +311,12 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Arturo Islas Allende</div>
+										<div class="slide-exponent__background">Activista Ambiental</div>
 										<div class="slide-exponent__description">
-											Además de ser actor, conductor y
-											empresario, es un ambientalista
-											apasionado de los animales, lo cual
-											lo ha llevado a tener una conexión
-											única con ellos. Su amor por los
-											animales y el planeta lo ha
-											posicionado a nivel internacional,
-											llevando sus conferencias a una gran
+											Además de ser actor, conductor y empresario, es un ambientalista
+											apasionado de los animales, lo cual lo ha llevado a tener una conexión
+											única con ellos. Su amor por los animales y el planeta lo ha
+											posicionado a nivel internacional, llevando sus conferencias a una gran
 											cantidad de países.
 										</div>
 									</div>
@@ -365,8 +331,13 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Joaquín López Dóriga</div>
+										<div class="slide-exponent__background">Periodista</div>
 										<div class="slide-exponent__description">
-											Periodista
+											Periodista, escritor y conductor de noticieros de radio y televisión.
+											Es titular del programa López-Dóriga en la cadena Radio Fórmula.
+											Fue el titular de "El Noticiero" de Televisa entre el 2000 y 2016.
+											En 2019 fue galardonado con una mención especial en los premios Rey de España
+											por sus 50 años de trayectoria periodística.
 										</div>
 									</div>
 								</div>
@@ -380,6 +351,7 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">JUCA</div>
+										<div class="slide-exponent__background">Influencer</div>
 										<div class="slide-exponent__description">
 											Posicionado como uno de los
 											Youtubers más importantes hoy en
@@ -400,8 +372,10 @@
 								<div class="slide-exponent">
 									<div class="slide-exponent__container">
 										<div class="slide-exponent__name">Miguel Torruco</div>
+										<div class="slide-exponent__background">Comisión de Boxeo</div>
 										<div class="slide-exponent__description">
-											Comisión de Boxeo
+											Emprendedor, egresado de la licenciatura en Mercadotecnia en la Universidad Iberoamericana,
+											Miguel Torruco Garza, fue nombrado Comisionado nacional de Boxeo desde enero del 2019.
 										</div>
 									</div>
 								</div>
@@ -501,6 +475,22 @@
 				<a href="https://www.ticketmaster.com.mx/motor-de-mexico-monterrey-24-03-2020/event/140058300508FAF6" class="btn btn-primary btn-lg" target="_blank">Ir a Ticketmaster</a>
 			</section>
 
+			<!-- Registro -->
+			<section class="section-register">
+				<div class="section-register__participants" id="registro">
+					<h3>Registro de Participantes</h3>
+					<div class="section-register__button-container">
+						<a href="html/modal-participants.html" rel="modal:open" class="btn btn-primary open-modal" id="modal-participants">Regístrate aquí</a>
+					</div>
+				</div>
+				<div class="section-register__press">
+					<h3>Registro de Prensa</h3>
+					<div class="section-register__button-container" id="prensa">
+						<a href="html/modal-press.html" rel="modal:open" class="btn btn-primary open-modal" id="modal-press">Soy prensa.</a>
+					</div>
+				</div>
+			</section>
+
 			<!-- PDF -->
 			<!-- <div class="section-pdf">
 				<a href="/files/motor-mx.pdf" class="btn btn-primary" target="_blank">Descargar PDF</a>
@@ -543,5 +533,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 	<!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script> -->
+
+	<!-- jQuery Modal -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
 	<script src="js/main.js"></script>
 </html>

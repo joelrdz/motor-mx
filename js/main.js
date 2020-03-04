@@ -153,3 +153,44 @@ function scaleBannerVideoSize(element) {
 		$('.homepage-hero-module .video-container video').addClass('fadeIn animated');
 	});
 }
+
+
+
+/* Modals */
+$('a#modal-participants').click(function(event) {
+	$(this).modal({
+		blockerClass: 'modal-blocker',
+		modalClass: 'modal modal-participants',
+		fadeDuration: 250,
+		fadeDelay: 0.80,
+		closeClass: 'icon-remove'
+	});
+
+	return false;
+});
+
+$('a#modal-press').click(function(event) {
+	$(this).modal({
+		blockerClass: 'modal-blocker',
+		modalClass: 'modal modal-press',
+		fadeDuration: 250,
+		fadeDelay: 0.80,
+		closeClass: 'icon-remove'
+	});
+
+	return false;
+});
+
+// $("#open-modal").modal({
+// 	fadeDuration: 1000,
+// 	fadeDelay: 0.50
+// });
+
+
+
+
+// Mobile Menu
+
+$(".navigation__link").click(function() {
+	$("#navi-toggle").prop("checked", false);
+})

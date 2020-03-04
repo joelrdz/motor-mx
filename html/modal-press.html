@@ -1,0 +1,85 @@
+<div class="text-center">
+	<h3>Registro de Prensa</h3>
+</div>
+
+<form class="press-form" action="https://formspree.io/motormexico.uanl@gmail.com" method="post" accept-charset="utf-8">
+	<div class="press-form__group">
+		<input type="text" class="press-form__input" placeholder="Nombre completo" id="fullName" name="Nombre completo" required>
+		<label for="fullName" class="press-form__label">Nombre Completo</label>
+	</div>
+	<div class="press-form__group">
+		<input type="tel" class="press-form__input" placeholder="Teléfono de oficina" id="offPhone" name="Tel. Oficina" required>
+		<label for="offPhone" class="press-form__label">Teléfono de oficina</label>
+	</div>
+	<div class="press-form__group">
+		<input type="tel" class="press-form__input" placeholder="Celular" id="cellPhone" name="Celular" required>
+		<label for="cellPhone" class="press-form__label">Celular</label>
+	</div>
+	<div class="press-form__group">
+		<input type="email" class="press-form__input" placeholder="Correo electrónico" id="email" name="Email" required>
+		<label for="email" class="press-form__label">Correo electrónico</label>
+	</div>
+	<div class="press-form__group">
+		<input type="text" class="press-form__input" placeholder="Nombre del medio de comunicación" id="company" name="Medio de comunicación" required>
+		<label for="company" class="press-form__label">Nombre del medio de comunicación</label>
+	</div>
+
+	<!-- <div class="press-form__group">
+		<input type="text" class="press-form__input" placeholder="Giro (Televisión, Radio, Prensa, Digital, Otro)" id="companyRole" required>
+		<label for="companyRole" class="press-form__label">Giro (Televisión, Radio, Prensa, Digital, Otro)</label>
+	</div> -->
+
+	<!-- Company Role -->
+	<div class="press-form__group">
+		<div>Giro</div>
+		<br>
+
+		<div class="press-form__radio-group">
+			<input type="radio" class="press-form__radio-input" id="roleTv" name="Giro del medio" value="Televisión">
+			<label for="roleTv" class="press-form__radio-label">
+				<span class="press-form__radio-button"></span> Televisión
+			</label>
+		</div>
+		<div class="press-form__radio-group">
+			<input type="radio" class="press-form__radio-input" id="roleRadio" name="Giro del medio" value="Radio">
+			<label for="roleRadio" class="press-form__radio-label">
+				<span class="press-form__radio-button"></span> Radio
+			</label>
+		</div>
+		<div class="press-form__radio-group">
+			<input type="radio" class="press-form__radio-input" id="rolePress" name="Giro del medio" value="Prensa">
+			<label for="rolePress" class="press-form__radio-label">
+				<span class="press-form__radio-button"></span> Prensa
+			</label>
+		</div>
+		<div class="press-form__radio-group">
+			<input type="radio" class="press-form__radio-input" id="roleDigital" name="Giro del medio" value="Digital">
+			<label for="roleDigital" class="press-form__radio-label">
+				<span class="press-form__radio-button"></span> Digital
+			</label>
+		</div>
+		<div class="press-form__radio-group">
+			<input type="radio" class="press-form__radio-input" id="roleOther" name="Giro del medio" value="Otro">
+			<label for="roleOther" class="press-form__radio-label">
+				<span class="press-form__radio-button"></span> Otro
+			</label>
+		</div>
+	</div>
+
+	<div class="press-form__group">
+		<input type="text" class="press-form__input" placeholder="Sitio web del medio" id="companySite" name="Sitio web del medio">
+		<label for="companySite" class="press-form__label">Sitio web del medio</label>
+	</div>
+	<div class="press-form__group">
+		<input type="text" class="press-form__input" placeholder="Instagram del medio" id="companyInstagram" name="Instagram del medio">
+		<label for="companyInstagram" class="press-form__label">Instagram del medio</label>
+	</div>
+	<div class="press-form__group">
+		<input type="text" class="press-form__input" placeholder="Twitter del medio" id="companyTwitter" name="Twitter del medio">
+		<label for="companyTwitter" class="press-form__label">Twitter del medio</label>
+	</div>
+
+	<div class="press-form__group">
+		<button class="btn btn-primary btn-block">Enviar</button>
+	</div>
+</form>

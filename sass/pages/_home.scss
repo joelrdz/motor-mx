@@ -1,11 +1,11 @@
 .site-main {
-	padding-top: var(--height-main-header);
+	margin-top: var(--height-main-header);
 	width: 100%;
 
 	overflow-x: hidden;
 
 	@include respond(tab-port) {
-		padding-top: 12.9rem;
+		margin-top: 8.1rem;
 	}
 
 	.section-container {
@@ -345,6 +345,23 @@
 					font-size: 2.2rem;
 				}
 
+				@include respond(phone) {
+					display: inline-block;
+				}
+			}
+
+			&__background {
+				background-color: #4dd0a2;
+				color: white;
+				padding: .5rem 1rem;
+				font-size: 1.2rem;
+				display: inline-block;
+				margin-bottom: 1rem;
+
+				@include respond(phone) {
+					display: inline-block;
+					vertical-align: top;
+				}
 			}
 
 			&__description {
@@ -534,6 +551,44 @@
 	}
 }
 
+.section-register {
+	background-color: black;
+	color: white;
+	padding: 3rem 0;
+	display: flex;
+
+	text-align: center;
+
+	@include respond(phone) {
+		flex-direction: column;
+	}
+
+	> div {
+		flex: 1 0;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	&__participants {
+
+	}
+
+	&__press {
+
+	}
+
+	&__button-container {
+		padding: 2rem 0;
+
+		@include respond(phone) {
+			text-align: center;
+			margin-bottom: 4rem;
+		}
+	}
+
+}
 
 
 /* ---------- */
