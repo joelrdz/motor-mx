@@ -17,6 +17,7 @@
 
 .section-info {
 	position: relative;
+	background-color: white;
 
 	&__banner {
 		background-image: url(/img/banner.png);
@@ -214,6 +215,7 @@
 	// background-color: var(--color-green-secondary);
 	border: 4px solid black;
 	position: relative;
+	background-color: white;
 
 	.section-title {
 		position: absolute;

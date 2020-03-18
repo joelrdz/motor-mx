@@ -19,4 +19,12 @@ body {
 
 	// Scrolling stuff... neccesary??
 	min-height: 100vh;
+
+
+	// COVID DISCLAIMER
+	background-color: black;
+	padding-bottom: 15rem;
+	@include respond(phone) {
+		padding-bottom: 22rem;
+	}
 }
