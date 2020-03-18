@@ -23,7 +23,10 @@ body {
 
 	// COVID DISCLAIMER
 	background-color: black;
-	padding-bottom: 15rem;
+	padding-bottom: 22rem;
+	@include respond(tab-port) {
+		padding-bottom: 24rem;
+	}
 	@include respond(phone) {
 		padding-bottom: 22rem;
 	}
