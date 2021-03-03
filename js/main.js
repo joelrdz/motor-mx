@@ -65,7 +65,7 @@ new Glide('#glide-past', {
 
 /* Countdown */
 // Set the date we're counting down to
-let countDownDate = new Date("Mar 24, 2020 10:00:00").getTime();
+let countDownDate = new Date("Apr 28, 2021 10:00:00").getTime();
 
 // Update the count down every 1 second
 let x = setInterval( function() {
